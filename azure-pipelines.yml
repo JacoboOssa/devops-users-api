@@ -18,8 +18,8 @@ variables:
   dockerRegistryServiceConnection: 'YourACRServiceConnectionName' 
   acrLoginServer: 'ingesoft5-bbfcc8fmg7bvghf9.azurecr.io' # From the image
   imageRepository: 'users-api' # Name for the image in ACR
-  dockerfilePath: '$(Build.SourcesDirectory)/users-api/Dockerfile'
-  buildContextPath: '$(Build.SourcesDirectory)/users-api'
+  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
+  buildContextPath: '$(Build.SourcesDirectory)'
   tag: '$(Build.BuildId)'
 
 stages:
