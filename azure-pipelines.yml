@@ -4,9 +4,7 @@ trigger:
   branches:
     include:
     - main # Or your default branch
-  paths:
-    include:
-    - users-api/* # Trigger only if files in users-api folder change
+# Removed paths filter as this is an independent repo
 
 resources:
 - repo: self
