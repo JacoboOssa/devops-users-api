@@ -31,7 +31,7 @@ stages:
   displayName: Build and Push stage
   jobs:
   - job: Build
-    displayName: Build and Push Frontend image
+    displayName: Build and Push Users API
     pool:
       vmImage: $(vmImageName)
     steps:
