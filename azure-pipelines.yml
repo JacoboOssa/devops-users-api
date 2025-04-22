@@ -14,7 +14,6 @@ variables:
   vmImageName: 'ubuntu-latest'
 
   # Azure Container Registry connection details
-  # IMPORTANT: Replace 'YourACRServiceConnectionName' with the actual name of your ACR Service Connection in Azure DevOps
   dockerRegistryServiceConnection: 'ACR-ingesoft5acrregistry-Connection' # Updated Service Connection Name
   acrLoginServer: 'ingesoft5acrregistry.azurecr.io' # Updated ACR Login Server
   imageRepository: 'users-api' # Name for the image in ACR
@@ -62,6 +61,7 @@ stages:
         repository: $(imageRepository) # Build locally first
         dockerfile: $(dockerfilePath)
         buildContext: $(buildContextPath)
+        arguments: '--no-cache' # Add this line to disable build cache
         tags: |
           $(tag)
           latest
