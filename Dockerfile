@@ -27,5 +27,5 @@ ENV SERVER_PORT=8083
 # Expose the port the app runs on
 EXPOSE 8083
 
-# Run the application
-ENTRYPOINT ["java", "-jar", "users-api.jar"]
+# Run the application, explicitly setting the server port
+ENTRYPOINT ["java", "-jar", "users-api.jar", "--server.port=${SERVER_PORT}"]
