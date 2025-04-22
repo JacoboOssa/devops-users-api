@@ -11,4 +11,4 @@ FROM openjdk:8-jdk-slim
 WORKDIR /app
 COPY --from=build /app/target/*.jar users-api.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java","-jar","users-api.jar"]
