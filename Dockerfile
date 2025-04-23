@@ -10,5 +10,5 @@ RUN mvn package -DskipTests
 FROM openjdk:8-jdk-slim
 WORKDIR /app
 COPY --from=build /app/target/*.jar users-api.jar
-EXPOSE 8080
+EXPOSE 8083
 ENTRYPOINT ["java","-jar","users-api.jar"]
