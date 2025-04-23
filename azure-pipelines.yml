@@ -24,7 +24,7 @@ variables:
   # Container App
   containerAppName: 'test-users-api-ca' # Nombre exacto de tu Container App
   resourceGroupName: 'rg-app-testing'  # RG donde está la Container App
-  azureResourceManagerConnection: 'AzureRM-ContainerApps' # Connection a tu suscripción de Azure
+  azureResourceManagerConnection: 'AzureRM-microservice' # Connection a tu suscripción de Azure
 
 stages:
 - stage: Build
