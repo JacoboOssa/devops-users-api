@@ -14,17 +14,17 @@ variables:
 
   # Azure Container Registry connection details
   # IMPORTANT: Replace 'YourACRServiceConnectionName' with the actual name of your ACR Service Connection in Azure DevOps
-  dockerRegistryServiceConnection: 'ACR-ingesoft5acrregistry-Connection' # Updated Service Connection Name
-  acrLoginServer: 'testacrgyvpcp.azurecr.io' # Updated ACR Login Server
+  dockerRegistryServiceConnection: 'ACR-prod-acrregistry-Connection' # Updated Service Connection Name
+  acrLoginServer: 'prodacrnq1ppt.azurecr.io' # Updated ACR Login Server
   imageRepository: 'users-api' # Name for the image in ACR
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   buildContextPath: '$(Build.SourcesDirectory)'
   tag: '$(Build.BuildId)'
   
   # Container App
-  containerAppName: 'test-users-api-ca' # Nombre exacto de tu Container App
-  resourceGroupName: 'rg-app-testing'  # RG donde está la Container App
-  azureResourceManagerConnection: 'AzureRM-microservice' # Connection a tu suscripción de Azure
+  containerAppName: 'prod-users-api-ca' # Nombre exacto de tu Container App
+  resourceGroupName: 'rg-app-prod'  # RG donde está la Container App
+  azureResourceManagerConnection: 'azureRM-prod' # Connection a tu suscripción de Azure
 
 stages:
 - stage: Build
